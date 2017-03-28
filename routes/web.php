@@ -14,3 +14,10 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+
+$app->get('/admin', ['as' => 'admin', 'uses' => 'AdminController@show']);
+$app->get('/admin/add', ['as' => 'admin.add', 'uses' => 'AdminController@add']);
+$app->post('/products/add', ['as' => 'products.create', 'uses' => 'ProductController@create']);
+
+$app->get('/products', ['uses' => 'ProductController@list']);
