@@ -2,8 +2,10 @@
 @extends('layout')
 
 @section('content')
+<ul class="list-group">
 @foreach($products as $product)
-	<h2>{{ $product->name }}</h2>
+	<li class="list-group-item">{{ $product->name }}</li>
 @endforeach
+</ul>
 
 @endsection

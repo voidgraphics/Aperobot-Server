@@ -8,28 +8,28 @@
 <h2>Ajouter un produit</h2>
 <form action="{{ route('products.create') }}" method="POST">
 	<fieldset>
-		<div>
+		<div class="form-group">
 			<label for="name">Nom du produit</label>
-			<input type="text" name="name">
+			<input class="form-control" type="text" id="name" name="name">
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="icon">Icône du produit</label>
-			<input type="text" name="icon">
+			<input class="form-control" type="text" id="icon" name="icon">
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="price">Prix brut</label>
-			<input type="text" name="price">
+			<input class="form-control" type="text" id="price" name="price">
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="salePrice">Prix de vente</label>
-			<input type="text" name="salePrice">
+			<input class="form-control" type="text" id="salePrice" name="salePrice">
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="availability">Quantité disponible</label>
-			<input type="text" name="availability">
+			<input class="form-control" type="text" id="availability" name="availability">
 		</div>
 
-		<input type="submit" value="Ajouter le produit">
+		<input class="btn btn-primary" type="submit" value="Ajouter le produit">
 	</fieldset>
 </form>
 @endsection
