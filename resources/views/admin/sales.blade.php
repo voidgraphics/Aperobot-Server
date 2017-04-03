@@ -11,5 +11,5 @@
 		<li>{{ $product->sold }} {{ $product->name }} - {{ $product->income }}€</li>
 	@endforeach
 </ul>
-<p>Total income: {{ $totalIncome}}€</p>
+<p>Revenus bruts: {{ $totalIncome}}€</p>
 @endsection
