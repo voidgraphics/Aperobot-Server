@@ -3,5 +3,5 @@
 	<nav>
 		<a href="{{ route('admin') }}">Tout afficher</a>
 		<a href="{{ route('admin.add') }}">Ajouter un produit</a>
-	</nav>
+		<a href="{{ route('admin.sales') }}">Lister les ventes</a>
 </header>
