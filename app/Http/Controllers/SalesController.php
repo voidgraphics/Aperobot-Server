@@ -21,7 +21,7 @@ class SalesController extends Controller
         }
     }
 
-    public function list() {
+    public function prepare() {
         $data['products'] = Product::all();
         $data['totalIncome'] = 0;
         $data['netIncome'] = 0;
@@ -34,7 +34,15 @@ class SalesController extends Controller
             $data['totalIncome'] += $product->income;
         }
 
-        return view('admin.sales', $data);
+        return $data;
+    }
+
+    public function get() {
+        return response()->json($this->prepare());
+    }
+
+    public function list() {
+        return view('admin.sales', $this->prepare());
     }
 
 }

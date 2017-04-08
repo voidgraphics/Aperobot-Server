@@ -21,5 +21,6 @@ $app->get('/admin/add', ['as' => 'admin.add', 'uses' => 'AdminController@add']);
 $app->get('/admin/sales', ['as' => 'admin.sales', 'uses' => 'SalesController@list']);
 $app->post('/products/add', ['as' => 'products.create', 'uses' => 'ProductController@create']);
 
+$app->get('/sales', 'SalesController@get');
 $app->get('/products', ['uses' => 'ProductController@list']);
 $app->post('/pay', ['uses' => 'SalesController@pay']);
